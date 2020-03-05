@@ -1,0 +1,16 @@
+version: '3.2'
+services:
+  theinternet:
+    image: gprestes/the-internet
+    ports:
+      - '5000:5000'
+  testcafe:
+    image: testcafe/testcafe
+    depends_on:
+      - theinternet
+    environment:
+      - BASEURL=http://host.docker.internal:5000
+    entrypoint: ['/opt/testcafe/docker/testcafe-docker.sh', 'chromium,firefox']
+    working_dir: /e2e
+    volumes:
+      - ./:/e2e

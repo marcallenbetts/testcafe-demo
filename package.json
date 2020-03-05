@@ -1,0 +1,19 @@
+{
+  "name": "testcafe-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "testcafe",
+    "test:mobile": "testcafe remote --qr-code",
+    "test:docker": "docker-compose up --exit-code-from testcafe",
+    "docker": "docker run -v /Users/marcbetts/github/testcafe-demo:/e2e -it testcafe/testcafe firefox ./e2e/tests/*.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "lodash": "^4.17.15",
+    "testcafe": "^1.8.2"
+  }
+}
