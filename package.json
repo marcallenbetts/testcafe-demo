@@ -14,6 +14,6 @@
   "license": "ISC",
   "devDependencies": {
     "lodash": "^4.17.21",
-    "testcafe": "^1.8.2"
+    "testcafe": "^1.16.0"
   }
 }
